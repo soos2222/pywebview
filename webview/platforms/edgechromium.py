@@ -58,7 +58,7 @@ class EdgeChrome:
         self.web_view.NavigationStarting += self.on_navigation_start
         self.web_view.NavigationCompleted += self.on_navigation_completed
         self.web_view.WebMessageReceived += self.on_script_notify
-        self.web_veiw.OnMouseClick += self.on_mouse_click
+        self.web_view.OnMouseClick += self.on_mouse_click
         print(dir(self.web_view.CoreWebView2))
 
         if window.transparent:
