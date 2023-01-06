@@ -47,7 +47,9 @@ class EdgeChrome:
         self.pywebview_window = window
         self.web_view = WebView2()
         props = CoreWebView2CreationProperties()
+        print(props)
         props.UserDataFolder = os.path.join(os.environ['LOCALAPPDATA'], 'pywebview')
+        print(props)
         self.web_view.CreationProperties = props
         form.Controls.Add(self.web_view)
 
@@ -58,7 +60,7 @@ class EdgeChrome:
         self.web_view.NavigationStarting += self.on_navigation_start
         self.web_view.NavigationCompleted += self.on_navigation_completed
         self.web_view.WebMessageReceived += self.on_script_notify
-        print(self.web_view.PermissionRequested)
+        #print(self.web_view.PermissionRequested)
 
         if window.transparent:
             self.web_view.DefaultBackgroundColor = Color.Transparent
