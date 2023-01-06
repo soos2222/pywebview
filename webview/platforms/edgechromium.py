@@ -58,6 +58,7 @@ class EdgeChrome:
         self.web_view.NavigationStarting += self.on_navigation_start
         self.web_view.NavigationCompleted += self.on_navigation_completed
         self.web_view.WebMessageReceived += self.on_script_notify
+        print(self.web_view.PermissionRequested)
 
         if window.transparent:
             self.web_view.DefaultBackgroundColor = Color.Transparent
